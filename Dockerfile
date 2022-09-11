@@ -1,5 +1,6 @@
 # Build Stage
 FROM node:lts-alpine as build-stage
+RUN apk update && apk upgrade
 WORKDIR /watchtower
 COPY app/github-watchtower/package*.json ./
 RUN npm install
