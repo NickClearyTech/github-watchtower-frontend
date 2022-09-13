@@ -9,7 +9,7 @@ services:
     ports:
       - 80:80
     networks:
-      - project_network
+      - watchtower-network
 
   test:
     build:
@@ -18,5 +18,5 @@ services:
     profiles: ["test"]
 
 networks:
-  project_network:
-    name: watchtower-network
+  watchtower-network:
+    name: github-watchtower-backend_watchtower_network
